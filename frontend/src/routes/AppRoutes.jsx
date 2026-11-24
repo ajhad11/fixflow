@@ -4,6 +4,10 @@ import { useAuth } from '../contexts/AuthContext';
 import { AppLayout } from '../layouts/AppLayout';
 import { LoginPage } from '../pages/auth/LoginPage';
 import { DashboardPage } from '../pages/dashboard/DashboardPage';
+import { CustomersPage } from '../pages/customers/CustomersPage';
+import { DevicesPage } from '../pages/devices/DevicesPage';
+import { RepairsPage } from '../pages/repairs/RepairsPage';
+import { PublicTrackPage } from '../pages/tracking/PublicTrackPage';
 import { PlaceholderPage } from '../pages/PlaceholderPage';
 
 const ProtectedRoute = ({ children }) => {
@@ -30,6 +34,7 @@ export const AppRoutes = () => {
     <Routes>
       {/* Public Routes */}
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/track/:token" element={<PublicTrackPage />} />
 
       {/* Protected App Routes */}
       <Route
@@ -42,9 +47,9 @@ export const AppRoutes = () => {
       >
         <Route index element={<Navigate to="/dashboard" replace />} />
         <Route path="dashboard" element={<DashboardPage />} />
-        <Route path="repairs" element={<PlaceholderPage title="Repairs Management" />} />
-        <Route path="customers" element={<PlaceholderPage title="Customer CRM" />} />
-        <Route path="devices" element={<PlaceholderPage title="Device Registry" />} />
+        <Route path="customers" element={<CustomersPage />} />
+        <Route path="devices" element={<DevicesPage />} />
+        <Route path="repairs" element={<RepairsPage />} />
         <Route path="technicians" element={<PlaceholderPage title="Technicians & Workload" />} />
         <Route path="inventory" element={<PlaceholderPage title="Spare Parts Inventory" />} />
         <Route path="suppliers" element={<PlaceholderPage title="Suppliers" />} />
