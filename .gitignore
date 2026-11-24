@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+
+# Database data
+backend/data/pgdata/
+backend/data/*.log
+backend/data/*.pid
+*.sqlite3
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Django media & static collected
+backend/media/*
+!backend/media/.gitkeep
+backend/staticfiles/
+
+# Logs
+*.log
+
+# Node & Frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
