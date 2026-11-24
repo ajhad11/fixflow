@@ -22,5 +22,5 @@ services:
 databases:
   - name: fixflow-db
     databaseName: fixflow_db
-    user: postgres
+    user: fixflow_user
     plan: free
