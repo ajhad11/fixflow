@@ -2,6 +2,7 @@ services:
   - type: web
     name: fixflow-backend
     env: python
+    rootDir: backend
     buildCommand: "./build.sh"
     startCommand: "gunicorn config.wsgi:application"
     envVars:
